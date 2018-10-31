@@ -19,7 +19,7 @@ if [ $KEY_NUM = 1 ]; then
 fi
 
 #Checking to see if the ssh folder exists, if not create it properly
-if [ ! -d "~/.ssh" ]; then
+if [ ! -a "~/.ssh" ]; then
     echo "creating ssh folder and setting permissions"
     mkdir ~/.ssh
     chmod 700 ~/.ssh
