@@ -12,11 +12,11 @@ echo "Which public key do you want to add to this server? Type 1 for Personal, 2
 read KEY_NUM
 
 if [ $KEY_NUM = 1 ]; then
-            KEY="id_rsa_personal.pub"
+            KEY="https://raw.githubusercontent.com/joncav/joncav/master/id_rsa_personal.pub"
         elif [ $KEY_NUM = 2 ]; then
-            KEY="id_rsa_op5.pub"
+            KEY="https://raw.githubusercontent.com/joncav/joncav/master/id_rsa_op5.pub"
         elif [ $KEY_NUM = 3 ]; then
-            KEY="id_rsa_4096_op5.pub"
+            KEY="https://raw.githubusercontent.com/joncav/joncav/master/id_rsa_4096_op5.pub"
 fi
 
 #Checking to see if the ssh folder exists, if not create it properly
@@ -35,4 +35,4 @@ fi
 
 #Copy the key we choose into place
 echo "Copying $KEY into place"
-cp $KEY ~/.ssh/authorized_keys
+curl $KEY >> ~/.ssh/authorized_keys
