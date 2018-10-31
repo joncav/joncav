@@ -34,5 +34,5 @@ fi
 
 #Copy the key we choose into place
 echo "copying $KEY into place"
-cp $KEY ~/.ssh/authorized_keys
+cp $KEY ~/.ssh/
 cat ~/.ssh/$KEY >> ~/.ssh/authorized_keys
