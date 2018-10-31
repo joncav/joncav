@@ -12,7 +12,7 @@ echo "Which public key do you want to add to this server? Type 1 for Personal, 2
 read KEY_NUM
 
 if [ $KEY_NUM = 1 ]; then
-            KEY="id_rsa.pub"
+            KEY="id_rsa_personal.pub"
         elif [ $KEY_NUM = 2 ]; then
             KEY="id_rsa_op5.pub"
         elif [ $KEY_NUM = 3 ]; then
