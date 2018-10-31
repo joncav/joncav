@@ -5,7 +5,7 @@ if [ $(id -u) = 0 ]; then
     echo "You are root, please change to your personal user"
     exit 1
 fi
-force change
+
 #Choose the key, which is manual but keeps it specific
 echo "Which public key do you want to add to this server? Type 1 for Personal, 2 for op5, 3 for op5-4096, followed by [ENTER]:"
 
